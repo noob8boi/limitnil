@@ -8,7 +8,7 @@
 body {
     font-family: 'Inter', 'Arial', sans-serif; /* Clean sans-serif font */
     background-color: #ffffff; /* White background (like '1') */
-    color: #000000; /* Black text (like '0') */
+    color: #000000; /* Default text black (like '0') */
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -25,18 +25,22 @@ body {
 
 /* Logo Styling */
 .logo {
+    display: inline-block; /* Allow padding and background sizing */
     font-size: 3.5rem; /* Large font size */
     font-weight: 700; /* Bold */
     letter-spacing: 1px;
     margin-bottom: 0.3em;
-    color: #000000; /* Black */
+    color: #ffffff; /* White text */
+    background-color: #000000; /* Black rectangular box */
+    padding: 0.3em 0.6em; /* Add padding inside the black box */
+
 }
 
 /* Slogan Styling */
 .slogan {
     font-size: 1.3rem;
     font-weight: 400; /* Regular weight */
-    color: #333; /* Slightly softer black for contrast */
+    color: #000000; /* Slightly softer black for contrast */
     margin-bottom: 2.5em; /* Space above buttons */
 }
 
@@ -48,27 +52,47 @@ body {
     align-items: center; /* Center buttons horizontally */
 }
 
-/* Common Button Styling */
+/* Common Button Styling (Base) */
 .btn {
     display: inline-block; /* Allow padding and sizing */
     padding: 12px 30px; /* Vertical and horizontal padding */
     border: 2px solid #000000; /* Black border */
-    background-color: #ffffff; /* White background */
-    color: #000000; /* Black text */
     text-decoration: none; /* Remove underline from links */
     font-size: 1rem;
     font-weight: 700; /* Bold text */
     border-radius: 50px; /* Fully rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-    min-width: 250px; /* Ensure buttons have a decent minimum width */
-}
-
-/* Button Hover Effect */
-.btn:hover {
-    background-color: #000000; /* Black background on hover */
-    color: #ffffff; /* White text on hover */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth hover effect */
+    min-width: 150px; /* Ensure buttons have a decent minimum width */
     cursor: pointer;
 }
+
+/* Play Store Button Styling (White BG, Black Text) */
+.btn-playstore {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Play Store Button Hover Effect */
+.btn-playstore:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* App Store Button Styling (Black BG, White Text) */
+.btn-appstore {
+    border-radius: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000; /* Make border match background initially */
+}
+
+/* App Store Button Hover Effect */
+.btn-appstore:hover {
+    background-color: #ffffff; /* Flip to white background */
+    color: #000000; /* Flip to black text */
+    border-color: #000000; /* Keep or show black border on hover */
+}
+
 
 /* Responsive adjustments */
 @media (min-width: 600px) {
