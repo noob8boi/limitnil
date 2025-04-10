@@ -1,0 +1,87 @@
+/* Basic Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Arial', sans-serif; /* Clean sans-serif font */
+    background-color: #ffffff; /* White background (like '1') */
+    color: #000000; /* Black text (like '0') */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    text-align: center;
+    padding: 20px; /* Add padding for smaller screens */
+}
+
+/* Main Content Container */
+.container {
+    max-width: 600px; /* Limit width on larger screens */
+    width: 100%;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 3.5rem; /* Large font size */
+    font-weight: 700; /* Bold */
+    letter-spacing: 1px;
+    margin-bottom: 0.3em;
+    color: #000000; /* Black */
+}
+
+/* Slogan Styling */
+.slogan {
+    font-size: 1.3rem;
+    font-weight: 400; /* Regular weight */
+    color: #333; /* Slightly softer black for contrast */
+    margin-bottom: 2.5em; /* Space above buttons */
+}
+
+/* App Links Container */
+.app-links {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    gap: 15px; /* Space between buttons */
+    align-items: center; /* Center buttons horizontally */
+}
+
+/* Common Button Styling */
+.btn {
+    display: inline-block; /* Allow padding and sizing */
+    padding: 12px 30px; /* Vertical and horizontal padding */
+    border: 2px solid #000000; /* Black border */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1rem;
+    font-weight: 700; /* Bold text */
+    border-radius: 50px; /* Fully rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    min-width: 250px; /* Ensure buttons have a decent minimum width */
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #ffffff; /* White text on hover */
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+    .app-links {
+        flex-direction: row; /* Side-by-side buttons on larger screens */
+        justify-content: center; /* Center buttons in the row */
+    }
+
+    .logo {
+        font-size: 4rem;
+    }
+
+    .slogan {
+        font-size: 1.5rem;
+    }
+}
